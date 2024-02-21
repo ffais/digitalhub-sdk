@@ -8,6 +8,7 @@ WORKDIR /app/
 
 # Get digitalhub-sdk
 ARG DHUB_VERSION=
+RUN echo $DHUB_VERSION
 RUN wget https://github.com/scc-digitalhub/digitalhub-sdk/archive/refs/tags/$DHUB_VERSION.zip
 RUN unzip $DHUB_VERSION.zip
 RUN mv digitalhub-sdk-$DHUB_VERSION digitalhub-sdk
